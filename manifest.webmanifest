@@ -1,0 +1,23 @@
+{
+  "name": "BUYERBUDDY — ผู้ช่วยงานจัดซื้อ",
+  "short_name": "BUYERBUDDY",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#087cf0",
+  "icons": [
+    {
+      "src": "assets/buyerbuddy-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/buyerbuddy-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
