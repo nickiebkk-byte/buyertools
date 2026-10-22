@@ -1013,4 +1013,36 @@ for(const id of ['sellAdvice','metricAdvice']){const card=$(id);const bubble=doc
 function applyBlueCapLayout(){const hasAdvice=['Sell-through','GMROI','ประสิทธิภาพ SKU / พื้นที่','ยอดขายต่อ STORE ต่อวัน'].includes(defs[currentIndex].name);document.body.classList.toggle('has-buddy-advice',hasAdvice);if(hasAdvice)document.querySelector('.results-pane>.hero').append(saveNotebookButton);else document.querySelector('#appScreen main .toolbar').after(saveNotebookButton)}
 const blueCapCalculate=calculate;calculate=function(){blueCapCalculate();applyBlueCapLayout()};
 const blueCapSet=setCalculator;setCalculator=function(i){blueCapSet(i);applyBlueCapLayout()};
+</script><style>
+/* Keep numeric values complete on one line; font sizes are fitted to available space. */
+[data-fit-number]{white-space:nowrap!important;overflow-wrap:normal!important;word-break:normal!important;min-width:0!important;max-width:100%!important;box-sizing:border-box}
+.result-row>*{min-width:0}.result-row>b{display:block;flex:0 1 60%;text-align:right}
+.hero,.results-pane,.secondary-results>*,.price-card,.gp-metric,.notebook-result,.compare-totals>div{min-width:0}
+</style><script>
+(()=>{
+const selector='#result,.secondary-results strong,.secondary-grid strong,#secondaryResults strong,.price-card .price,.gp-metric strong,.result-row b,.notebook-result strong,.compare-totals strong,.compare-table output,.tier-table output,#tierBaseGp,#customLive strong,#customLive output,input[type="number"]';
+let frame=0;const observed=new WeakSet();
+const ro=new ResizeObserver(schedule);
+function schedule(){if(!frame)frame=requestAnimationFrame(()=>{frame=0;fitAll()})}
+function fitAll(){
+ const candidates=new Set(document.querySelectorAll(selector));
+ document.querySelectorAll('.hero strong,.hero .number,.results-pane strong,.bento-answer strong,[class*="card"] output,[class*="card"] strong').forEach(el=>{if(/\d/.test(el.textContent)&&!el.querySelector('input,button,div,p'))candidates.add(el)});
+ candidates.forEach(el=>{
+ if(!el.getClientRects().length||el.clientWidth===0)return;
+ if(!observed.has(el)){observed.add(el);ro.observe(el);if(el.parentElement)ro.observe(el.parentElement)}
+ el.setAttribute('data-fit-number','');
+ el.style.removeProperty('font-size');
+ const base=parseFloat(getComputedStyle(el).fontSize);if(!base)return;
+ const cs=getComputedStyle(el),input=el instanceof HTMLInputElement;
+ const available=el.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight)-(input?20:1);
+ if(available<=0)return;
+ let measure;
+ if(input){const canvas=document.createElement('canvas'),ctx=canvas.getContext('2d');measure=()=>{const c=getComputedStyle(el);ctx.font=c.fontWeight+' '+c.fontSize+' '+c.fontFamily;return ctx.measureText(el.value||el.placeholder||'0').width}}
+ else{const range=document.createRange();range.selectNodeContents(el);measure=()=>range.getBoundingClientRect().width}
+ if(measure()>available){let lo=1,hi=base;for(let i=0;i<14;i++){const mid=(lo+hi)/2;el.style.setProperty('font-size',mid+'px','important');if(measure()<=available)lo=mid;else hi=mid}el.style.setProperty('font-size',lo.toFixed(2)+'px','important')}
+ });
+}
+new MutationObserver(schedule).observe(document.body,{subtree:true,childList:true,characterData:true});
+document.addEventListener('input',schedule);document.addEventListener('click',schedule);window.addEventListener('resize',schedule);document.fonts.ready.then(schedule);schedule();
+})();
 </script></body></html>
