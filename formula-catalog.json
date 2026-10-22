@@ -1,0 +1,170 @@
+{
+  "0": {
+    "name": "ราคาขายตาม Margin เป้าหมาย",
+    "category": 0
+  },
+  "1": {
+    "name": "กำไร / Margin / Markup",
+    "category": 0
+  },
+  "2": {
+    "name": "ทุนสูงสุดตาม Margin",
+    "category": 0
+  },
+  "3": {
+    "name": "ส่วนลดสูงสุดตาม Margin",
+    "category": 0
+  },
+  "4": {
+    "name": "ส่วนลดโปรโมชั่น",
+    "category": 1
+  },
+  "5": {
+    "name": "ผลตอบแทนโปรหลังเงินสนับสนุน",
+    "category": 1
+  },
+  "6": {
+    "name": "เงินสนับสนุนเพื่อรักษา Margin",
+    "category": 1
+  },
+  "7": {
+    "name": "จำนวนขายเพื่อรักษากำไรเดิม",
+    "category": 1
+  },
+  "8": {
+    "name": "กำไรส่วนเพิ่ม / Promotion ROI",
+    "category": 1
+  },
+  "9": {
+    "name": "สต็อกปลายงวด",
+    "category": 2
+  },
+  "10": {
+    "name": "มูลค่าสต็อก",
+    "category": 2
+  },
+  "11": {
+    "name": "Days of Supply / ADS",
+    "category": 2
+  },
+  "12": {
+    "name": "Stock Turn / Inventory Days",
+    "category": 2
+  },
+  "13": {
+    "name": "จุดสั่งซื้อ / จำนวนสั่งซื้อ",
+    "category": 2
+  },
+  "14": {
+    "name": "Aged Stock %",
+    "category": 2
+  },
+  "15": {
+    "name": "ชดเชยส่วนต่างต้นทุน",
+    "category": 3
+  },
+  "16": {
+    "name": "ชดเชย STOCK คงที่ต่อชิ้น",
+    "category": 3
+  },
+  "17": {
+    "name": "แบ่งรับภาระการลดราคา",
+    "category": 3
+  },
+  "18": {
+    "name": "ชดเชยตามชิ้นขายสุทธิ",
+    "category": 4
+  },
+  "19": {
+    "name": "ชดเชยเป็น % ของยอดขาย",
+    "category": 4
+  },
+  "20": {
+    "name": "ชดเชยส่วนต่างราคา / มีเพดาน",
+    "category": 4
+  },
+  "21": {
+    "name": "กระทบยอดสถานะ CN",
+    "category": 5
+  },
+  "22": {
+    "name": "อายุรายการเกินกำหนด",
+    "category": 5
+  },
+  "23": {
+    "name": "ส่วนลดหลายชั้น",
+    "category": 6
+  },
+  "24": {
+    "name": "ซื้อแถม / ทุนเฉลี่ย",
+    "category": 6
+  },
+  "25": {
+    "name": "Rebate อัตราเดียวเมื่อถึงเป้า",
+    "category": 6
+  },
+  "26": {
+    "name": "Rebate ขั้นบันไดเฉพาะส่วน",
+    "category": 6
+  },
+  "27": {
+    "name": "ยอดขาย Growth / Achievement",
+    "category": 7
+  },
+  "28": {
+    "name": "GMROI",
+    "category": 7
+  },
+  "29": {
+    "name": "Sell-through",
+    "category": 7
+  },
+  "30": {
+    "name": "ประสิทธิภาพ SKU / พื้นที่",
+    "category": 7
+  },
+  "31": {
+    "name": "ยอดขายต่อ STORE ต่อวัน",
+    "category": 7
+  },
+  "32": {
+    "name": "Supplier OTIF / Fill Rate",
+    "category": 7
+  },
+  "33": {
+    "name": "งบซื้อคงเหลือราคาทุน",
+    "category": 7
+  },
+  "34": {
+    "name": "เปรียบเทียบราคาขาย 5 ราคา",
+    "category": 0
+  },
+  "35": {
+    "name": "BUNDLE PRICE • สินค้า 2 ชิ้น",
+    "category": 0
+  },
+  "36": {
+    "name": "ซื้อ X แถม Y",
+    "category": 1
+  },
+  "37": {
+    "name": "ซื้อครบ X แถม / ลด / Voucher",
+    "category": 1
+  },
+  "38": {
+    "name": "ซื้อมาก ลดมาก • 5 ระดับ",
+    "category": 1
+  },
+  "39": {
+    "name": "ของแถม • ROI เทียบยอดเพิ่ม",
+    "category": 1
+  },
+  "40": {
+    "name": "สูตรของฉัน",
+    "category": 8
+  },
+  "custom": {
+    "name": "สูตรตั้งเอง",
+    "category": 8
+  }
+}
